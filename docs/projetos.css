@@ -1,0 +1,450 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ECEFF4;
+    color: #1B365D;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #1B365D;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.logo img {
+    width: 220px;
+    height: auto;
+}
+
+.sobre-mim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto-perfil img {
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border: 4px solid #F28C00;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 1;
+    text-align: right;
+}
+
+.info-perfil {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.contact-info a {
+    color: #F28C00;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skills span {
+    background-color: #1B365D;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.projeto {
+    margin-bottom: 20px;
+}
+
+.projeto h3 {
+    color: #F28C00;
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1B365D;
+    color: white;
+    border-radius: 10px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.creative-navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.creative-navbar ul li {
+    position: relative;
+}
+
+.creative-navbar ul li a {
+    text-decoration: none;
+    color: #1B365D;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.creative-navbar ul li a:hover {
+    background-color: #F28C00;
+    color: #1B365D;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.creative-navbar ul li a.active {
+    background-color: #F28C00;
+    color: #1B365D;
+    font-weight: bold;
+}
+
+.secao-home {
+    margin-top: 20px;
+}
+
+.bloqueado {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* === Página de Projetos === */
+
+hr {
+    border: none;
+    border-top: 2px solid #dde3ec;
+    margin: 16px 0;
+}
+
+.projetos-container {
+    margin-top: 24px;
+    padding: 36px 40px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(27, 54, 93, 0.10);
+    border-top: 4px solid #F28C00;
+}
+
+/* Bloco de introdução do projeto */
+.projeto-intro {
+    background-color: #F9FAFB;
+    border: 1px solid #dde3ec;
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.projeto-intro p {
+    margin: 0;
+    color: #2d4a70;
+    line-height: 1.75;
+}
+
+.projeto-intro p a {
+    color: #F28C00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.projeto-intro p a:hover {
+    text-decoration: underline;
+}
+
+.projeto-intro .btn {
+    align-self: flex-start;
+    padding: 9px 22px;
+    font-size: 0.88em;
+    margin-top: 4px;
+}
+
+.projeto-ano {
+    display: inline-block;
+    background-color: #1B365D;
+    color: #F28C00;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.82em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    align-self: flex-start;
+}
+
+/* Logo do projeto */
+.projeto-logo {
+    max-width: 140px !important;
+    padding: 14px;
+    background-color: #fff;
+    border: 3px solid #F28C00;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(242, 140, 0, 0.18);
+    margin: 8px auto 28px !important;
+}
+
+/* Título do projeto */
+.projeto-item h2 {
+    color: #F28C00;
+    font-size: 1.65em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #ECEFF4;
+}
+
+/* Subtítulos de seção */
+.projeto-item h3 {
+    color: #1B365D;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 28px 0 10px;
+    padding: 7px 14px;
+    background-color: #ECEFF4;
+    border-left: 4px solid #F28C00;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Parágrafo de descrição */
+.projeto-item p {
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #2d4a70;
+}
+
+/* Imagens centralizadas */
+.projeto-item img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto 20px;
+    display: block;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Citações / blocos de texto */
+.projeto-item blockquote {
+    background-color: #F9FAFB;
+    border-left: 4px solid #F28C00;
+    padding: 14px 18px;
+    margin: 10px 0 16px;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.75;
+    color: #2d4a70;
+}
+
+/* Lista de tecnologias */
+.projeto-item > ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.projeto-item > ul > li {
+    margin-bottom: 0;
+}
+
+/* Cards das tecnologias (details/summary) */
+.projeto-item details {
+    background-color: #FFFFFF;
+    border: 1px solid #dde3ec;
+    border-radius: 8px;
+    padding: 10px 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projeto-item details[open] {
+    border-color: #F28C00;
+    box-shadow: 0 2px 10px rgba(242, 140, 0, 0.13);
+}
+
+.projeto-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1B365D;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.projeto-item summary::-webkit-details-marker { display: none; }
+
+.projeto-item summary::before {
+    content: '▸';
+    color: #F28C00;
+    font-size: 0.85em;
+    transition: transform 0.2s ease;
+    display: inline-block;
+    width: 14px;
+}
+
+.projeto-item details[open] summary::before {
+    content: '▾';
+}
+
+.projeto-item summary:hover {
+    color: #F28C00;
+}
+
+/* Lista de skills dentro de blockquote */
+.projeto-item blockquote ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.projeto-item blockquote ul li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    border-bottom: 1px solid #eef1f5;
+    line-height: 1.65;
+}
+
+.projeto-item blockquote ul li:last-child {
+    border-bottom: none;
+}
+
+.projeto-item blockquote ul li::before {
+    content: '▸';
+    color: #F28C00;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    font-size: 0.82em;
+}
+
+/* Botão de acesso ao projeto */
+.btn-wrapper {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 2px solid #ECEFF4;
+    text-align: center;
+}
+
+.projeto-item .btn {
+    display: inline-block;
+    padding: 13px 36px;
+    background-color: #F28C00;
+    color: #1B365D;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(242, 140, 0, 0.25);
+}
+
+.projeto-item .btn:hover {
+    background-color: #1B365D;
+    color: #F28C00;
+    box-shadow: 0 6px 16px rgba(27, 54, 93, 0.2);
+    transform: translateY(-1px);
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    .info-perfil {
+        text-align: center;
+    }
+
+    .creative-navbar ul {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .creative-navbar ul li a {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+
+    .projetos-container {
+        padding: 15px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    .info-perfil h1 {
+        font-size: 1.1em;
+    }
+
+    .info-perfil h2 {
+        font-size: 0.95em;
+    }
+
+    .creative-navbar ul li a {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas Ribeiro - Projetos</title>
+    <link rel="stylesheet" href="../projetos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo Jonas Ribeiro" />
+            </div>
+            <div class="info-perfil">
+                <h1>JONAS RAFAEL SIQUEIRA RIBEIRO</h1>
+                <h2>Desenvolvedor de Softwares</h2>
+                <div class="contact-info">
+                    <p>📧 jonasrafdev@gmail.com</p>
+                    <p>📍 São José dos Campos, SP - Brasil</p>
+                    <p>🔗 <a href="https://linkedin.com/in/jonasrsribeiro" target="_blank">LinkedIn</a> | 🔗 <a href="https://github.com/jonasrsribeiro" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="creative-navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projetos-pessoais.html">Projetos Pessoais</a></li>
+                <li><a href="projetos.html" class="active">Projetos Integradores</a></li>
+                <li><a href="informacoes.html">Informações</a></li>
+            </ul>
+        </nav>
+        <br>
+        <hr>
+        <section class="projetos-container">
+            <article class="projeto-item">
+                <nav class="creative-navbar">
+                    <ul>
+                        <li><a href="projetos.html">1 SEMESTRE</a></li>
+                        <li><a href="projetos2.html">2 SEMESTRE</a></li>
+                        <li><a href="projetos3.html">3 SEMESTRE</a></li>
+                        <li><a href="projetos4.html">4 SEMESTRE</a></li>
+                        <li><a href="projetos5.html" class="active">5 SEMESTRE</a></li>
+                        <li><a href="projetos6.html">6 SEMESTRE</a></li>
+                    </ul>
+                </nav>
+                <br>
+                <hr>
+                <h2>noCloud - Mapeamento Automatizado de Nuvens em Imagens de Satélite com Deep Learning</h2>
+                <p style="text-align: center;">
+                    <img src="../img/logo noCloud.png" alt="logo noCloud" class="projeto-logo">
+                </p>
+                <div class="projeto-intro">
+                    <span class="projeto-ano">2024.2</span>
+                    <p>Desenvolvido para o Projeto Integrador 5 da FATEC, com a <a href="https://visionaespacial.com.br/" target="_blank">Visiona Tecnologia Espacial</a> como cliente. Utilizando as metodologias Scrum, atuei como Development Team.</p>
+                    <p>Nossa parceira, a Visiona Tecnologia Espacial — empresa joint venture entre a Embraer e a Telebras —, enfrenta o desafio de processar grandes volumes de imagens do satélite CBERS4A/WPM para análise territorial. A ausência de máscaras de nuvens nas imagens limitava a usabilidade dos dados, especialmente em regiões tropicais com alta cobertura de nuvens, tornando o processo de filtragem manual inviável em escala.</p>
+                    <a href="https://github.com/jonasrsribeiro/documentation" target="_blank" class="btn">Acessar Repositório noCloud</a>
+                </div>
+
+                <h3>Dificuldades</h3>
+                <blockquote>
+                    O satélite CBERS4A/WPM captura imagens sem classificação automática de cobertura de nuvens, o que exige análise manual para identificar e mascarar regiões não utilizáveis. Em regiões tropicais, esse problema é especialmente crítico pela alta frequência de cobertura de nuvens. O processo manual era custoso, lento e impossível de escalar para o volume de imagens gerado pelo satélite.
+                </blockquote>
+
+                <h3>Proposta de Solução</h3>
+                <blockquote>
+                    Desenvolver uma aplicação mobile integrada à nuvem que automatiza o mapeamento de nuvens e sombras utilizando Deep Learning. O usuário define a área de interesse e o período, o sistema acessa as imagens do INPE via API, processa automaticamente com o modelo de IA, exibe o resultado em mapa georreferenciado interativo e disponibiliza o download das máscaras em formato vetorial — tornando viável a análise em escala de grandes regiões.
+                </blockquote>
+
+                <p style="text-align: center;">
+                    <img src="../img/gifNoCloud.gif" alt="Demonstração do Projeto noCloud">
+                </p>
+
+                <h3>Tecnologias Utilizadas</h3>
+                <ul>
+                    <li>
+                        <strong>Python:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Python foi a linguagem do backend de IA (controller-identificacao-ia), responsável por processar as imagens de satélite. O algoritmo de detecção de nuvens foi implementado em Python com suporte a múltiplas bandas espectrais (incluindo banda 16), integração com GDAL para manipulação de imagens geoespaciais e endpoints para comunicação com o Firebase.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Flutter:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            O frontend mobile foi desenvolvido em Flutter, o framework multiplataforma do Google baseado em Dart. A escolha permitiu desenvolver o aplicativo para Android e iOS a partir de uma única base de código, exibindo mapas georreferenciados com as máscaras de nuvens geradas pelo modelo de IA.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Firebase:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Firebase foi utilizado como solução de backend-as-a-service para autenticação de usuários e armazenamento. O controller-identificacao-ia integrou os endpoints de armazenamento do Firebase para persistir os resultados das análises de imagens processadas pelo modelo de Deep Learning.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>PostgreSQL:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            PostgreSQL foi utilizado no backend de cadastro e autenticação (controller-cadastro-autenticacao) para persistir dados de usuários e histórico de análises. Complementou o Firebase ao centralizar dados relacionais que exigiam maior controle transacional.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Docker e Docker Compose:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Toda a infraestrutura do projeto foi containerizada com Docker. Cada controller (identificacao-ia, cadastro-autenticacao, firebase) teve sua própria imagem Docker com configurações distintas para ambiente de desenvolvimento e produção. O Docker Compose orquestrou os serviços com configurações de porta, variáveis de ambiente e dependências entre containers.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>GitHub Actions:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Workflows de CI/CD foram configurados para os ambientes de dev e prod, automatizando a atualização das imagens Docker a cada push nas branches correspondentes. Cada controller teve seus próprios workflows independentes, garantindo deploys isolados por módulo.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Roboflow:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Plataforma de visão computacional utilizada para anotação e treinamento do modelo de segmentação de nuvens. O Roboflow facilitou o processo de preparação do dataset de imagens de satélite e exportação do modelo treinado para integração com o backend Python.
+                        </details>
+                    </li>
+                </ul>
+
+                <h3>Contribuições Pessoais</h3>
+                <blockquote>
+                    <p>
+                        Neste projeto, assumi a responsabilidade pela infraestrutura de DevOps de toda a aplicação e pelo desenvolvimento do backend de IA. Configurei os ambientes Docker e os workflows de GitHub Actions para dev e prod nos três controllers principais (identificacao-ia, cadastro-autenticacao e firebase-controller), garantindo que o time pudesse desenvolver e subir novas versões de forma automatizada. No controller-identificacao-ia, trabalhei diretamente no processamento de imagens de satélite em Python: adicionei o suporte à biblioteca GDAL para manipulação de imagens geoespaciais, incluí o reconhecimento pela banda 16, refatorei as rotas e serviços para separação de responsabilidades, e fiz a integração dos endpoints com o Firebase. Os desafios técnicos foram altos — montar uma imagem Docker com GDAL funcional, por exemplo, exigiu muitas tentativas e estudo, mas no final consegui entregar a infraestrutura estável para o time focar no desenvolvimento das features.
+                    </p>
+                </blockquote>
+
+                <h3>Hard Skills</h3>
+                <blockquote>
+                    <ul>
+                        <li>Python: Contato mais avançado com Python em um contexto de processamento de imagens e integração com bibliotecas científicas (GDAL, Roboflow). Saí de scripts básicos para um serviço de backend estruturado com rotas, serviços e Docker.</li>
+                        <li>Docker e GitHub Actions (DevOps): Evolução significativa. Fui de "usar Docker para consistência local" (sem 3) para "estruturar a infraestrutura completa de CI/CD para múltiplos serviços em ambientes distintos". O aprendizado foi intenso e muito prático.</li>
+                        <li>Processamento de Imagens Geoespaciais (GDAL): Primeiro contato com dados de satélite e bibliotecas de geoprocessamento em Python. Entender como bandas espectrais funcionam e como manipular imagens no formato geoespacial foi uma área completamente nova.</li>
+                        <li>Firebase: Integração com Firebase como backend-as-a-service, configurando autenticação e armazenamento dentro de um contexto de microsserviços com Docker.</li>
+                    </ul>
+                </blockquote>
+
+                <h3>Soft Skills</h3>
+                <blockquote>
+                    <ul>
+                        <li>Proatividade: Tomei para mim a responsabilidade pelo DevOps do projeto, uma área que nenhum membro do time dominava. Em vez de esperar que a solução surgisse, fui atrás do conhecimento e estruturei toda a infraestrutura do zero — Docker, GitHub Actions, configurações de dev e prod para todos os controllers — para que o time pudesse se concentrar no desenvolvimento das features.</li>
+                        <li>Autonomia: O trabalho com GDAL, Docker e processamento de imagens de satélite envolveu tecnologias completamente novas. Passei muitas horas tentando, falhando e recomeçando sem pedir ajuda imediatamente, desenvolvendo a capacidade de persistir em problemas complexos por conta própria. Quando precisei de apoio, já havia esgotado as possibilidades sozinho.</li>
+                        <li>Comunicação: Gerenciar múltiplos PRs que impactavam toda a equipe exigiu comunicar decisões de infraestrutura de forma clara e objetiva. Aprendi que comunicação técnica precisa ser direta e precisa — uma configuração incorreta de Docker mal explicada pode travar o desenvolvimento de todo o time.</li>
+                        <li>Entrega e Resultados: O nível de dificuldade técnica foi o mais alto que enfrentei até então. Entregar a infraestrutura de CI/CD e o backend de IA dentro das sprints, com tecnologias novas como GDAL e processamento de imagens de satélite, exigiu muito esforço. A entrega foi possível pela persistência e pelo foco em resolver um problema de cada vez.</li>
+                    </ul>
+                </blockquote>
+
+                <div class="btn-wrapper">
+                    <a href="https://github.com/jonasrsribeiro/documentation" class="btn">Acessar Projeto</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jonas Rafael Siqueira Ribeiro.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas Ribeiro - Projetos Pessoais</title>
+    <link rel="stylesheet" href="../projetos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo Jonas Ribeiro" />
+            </div>
+            <div class="info-perfil">
+                <h1>JONAS RAFAEL SIQUEIRA RIBEIRO</h1>
+                <h2>Desenvolvedor de Softwares</h2>
+                <div class="contact-info">
+                    <p>📧 jonasrafdev@gmail.com</p>
+                    <p>📍 São José dos Campos, SP - Brasil</p>
+                    <p>🔗 <a href="https://linkedin.com/in/jonasrsribeiro" target="_blank">LinkedIn</a> | 🔗 <a href="https://github.com/jonasrsribeiro" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="creative-navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projetos-pessoais.html" class="active">Projetos Pessoais</a></li>
+                <li><a href="projetos.html">Projetos Integradores</a></li>
+                <li><a href="informacoes.html">Informações</a></li>
+            </ul>
+        </nav>
+        <br>
+        <hr>
+        <section class="projetos-container">
+            <article class="projeto-item">
+
+                <!-- ==================== iWalkNup ==================== -->
+                <h2>iWalkNup - Jogo Mobile Gamificado para Caminhadas e Corridas</h2>
+
+                <div class="projeto-intro">
+                    <span class="projeto-ano">Projeto Pessoal</span>
+                    <p>Aplicativo mobile multiplataforma (Android e iOS) desenvolvido em React Native com proposta de gamificação de atividades físicas ao ar livre — caminhadas e corridas. A ideia central é transformar o ato de caminhar ou correr em uma experiência de jogo: o usuário se move no mundo real e essa movimentação é refletida no app, com rastreamento GPS em tempo real, visualização do trajeto em mapa interativo e autenticação via Firebase.</p>
+                    <p>O projeto nasceu da interseção entre o interesse por jogos digitais e desenvolvimento mobile, explorando como mecânicas de jogo podem incentivar hábitos saudáveis no mundo real.</p>
+                    <a href="https://github.com/jonasrsribeiro/iwalknup" target="_blank" class="btn">Acessar Repositório iWalkNup</a>
+                </div>
+
+                <h3>Contexto e Motivação</h3>
+                <blockquote>
+                    A gamificação de atividades físicas — popularizada por jogos como Pokémon GO — mostrou que unir movimento real e mecânicas de jogo pode engajar pessoas que normalmente não se exercitam. O iWalkNup parte dessa premissa: criar uma experiência onde caminhar e correr têm um propósito dentro de um jogo, usando o GPS do dispositivo como controlador. Foi também o primeiro mergulho no ecossistema React Native, cobrindo o ciclo completo de uma aplicação mobile: autenticação, sensores do dispositivo, geolocalização e interface gamificada.
+                </blockquote>
+
+                <h3>Proposta</h3>
+                <blockquote>
+                    Desenvolver um jogo mobile onde o deslocamento físico do usuário (caminhada ou corrida) é capturado via GPS e traduzido em progresso dentro da aplicação. O usuário se autentica com conta Google ou e-mail, visualiza sua posição e trajeto em mapa com estilo personalizado, acumula distância percorrida e interage com elementos do jogo vinculados à sua localização real.
+                </blockquote>
+
+                <h3>Tecnologias Utilizadas</h3>
+                <ul>
+                    <li>
+                        <strong>React Native:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Framework para desenvolvimento mobile multiplataforma usando JavaScript e TypeScript. Permite criar aplicativos nativos para Android e iOS a partir de uma única base de código. Escolhido por aproveitar o conhecimento já adquirido em React para web, reduzindo a curva de aprendizado do ecossistema mobile.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Firebase Auth e Google Sign-In:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Firebase Authentication oferece autenticação de usuários de forma segura e escalável, com suporte a e-mail/senha e provedores externos. Integrado com o Google Sign-In, permite que o usuário acesse o app com sua conta Google sem precisar criar um cadastro separado.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>React Native Maps e Geolocation:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            React Native Maps fornece componentes de mapa interativo integrados ao Google Maps, com suporte a marcadores, polígonos e estilos personalizados. O pacote Geolocation acessa o GPS do dispositivo para captura de coordenadas em tempo real. O mapa foi estilizado com uma paleta visual personalizada via arquivo de configuração JSON.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Geolib:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Biblioteca JavaScript para cálculos geoespaciais, como distância entre coordenadas, bearing e conversões de unidades. Utilizada para calcular distâncias percorridas entre pontos GPS capturados ao longo de um trajeto.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>React Native Paper:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Biblioteca de componentes de interface seguindo as diretrizes do Material Design. Utilizada para construir a UI do aplicativo com componentes prontos e consistentes, como botões, cards, inputs e navegação.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>AsyncStorage:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Solução de armazenamento local assíncrono para React Native. Permite persistir dados do usuário no dispositivo sem necessidade de conexão constante com a internet, garantindo funcionamento offline básico.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>TypeScript:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Superset tipado do JavaScript que adiciona checagem estática de tipos. Utilizado para aumentar a confiabilidade do código e facilitar a manutenção, especialmente ao lidar com dados de geolocalização e respostas de API.
+                        </details>
+                    </li>
+                </ul>
+
+                <h3>Contribuições e Aprendizados</h3>
+                <blockquote>
+                    Projeto desenvolvido integralmente de forma autônoma. Pensar na experiência de um jogo que usa o mundo real como cenário adicionou uma camada de design de produto além do técnico — como traduzir movimento físico em feedback significativo dentro de uma interface. Do lado técnico, o maior desafio foi o ecossistema nativo do React Native: configuração de ambiente para Android e iOS, permissões de localização em cada plataforma e integração de bibliotecas com código nativo (Kotlin e Objective-C). Foi o primeiro contato real com desenvolvimento mobile, consolidando a visão multiplataforma além do ambiente web.
+                </blockquote>
+
+                <div class="btn-wrapper">
+                    <a href="https://github.com/jonasrsribeiro/iwalknup" class="btn" target="_blank">Acessar Projeto</a>
+                </div>
+
+                <br>
+                <hr>
+
+                <!-- ==================== IA Agrupamento Genômico ==================== -->
+                <h2>IA - Agrupamento Genômico de Vírus SARS-CoV</h2>
+
+                <div class="projeto-intro">
+                    <span class="projeto-ano">Projeto Pessoal</span>
+                    <p>Algoritmo de agrupamento (clustering) desenvolvido em Python para análise comparativa de sequências genômicas de vírus da família SARS-CoV, incluindo BAT-SARS, Civet-SARS, SARS-CoV-2, MERS e Ebola. O projeto aplica técnicas de Inteligência Artificial para identificar automaticamente similaridades entre genomas virais.</p>
+                    <p>Este projeto é fruto da intersecção entre minha formação em Ciências Biológicas (UFRJ) e minha trajetória em desenvolvimento de software, aplicando IA a dados bioinformáticos reais.</p>
+                    <a href="https://github.com/jonasrsribeiro/IA-agrupamento-genomico" target="_blank" class="btn">Acessar Repositório IA Agrupamento Genômico</a>
+                </div>
+
+                <h3>Contexto e Motivação</h3>
+                <blockquote>
+                    Durante a pandemia de COVID-19, o interesse em aplicar conhecimentos computacionais a dados biológicos se intensificou. Com background em Microbiologia e Imunologia, surgiu a oportunidade de cruzar bioinformática e machine learning para analisar sequências genômicas de coronavírus e vírus relacionados. O objetivo foi entender como algoritmos de clustering conseguem identificar, de forma não supervisionada, grupos de vírus com sequências similares.
+                </blockquote>
+
+                <h3>Proposta de Solução</h3>
+                <blockquote>
+                    Desenvolver um pipeline em Python que lê arquivos FASTA com sequências de DNA de diferentes vírus, processa e normaliza as sequências, aplica redução de dimensionalidade via PCA e realiza clustering com K-Means — determinando automaticamente o número ideal de clusters pelo método do cotovelo — visualizando o resultado em um gráfico 3D interativo.
+                </blockquote>
+
+                <h3>Genomas Analisados</h3>
+                <blockquote>
+                    <ul>
+                        <li>BAT-SARS.fasta — SARS-CoV encontrado em morcegos</li>
+                        <li>Civet-SARS.fasta — SARS-CoV encontrado em civetas (hospedeiro intermediário)</li>
+                        <li>SARS-COV2.fasta — Vírus responsável pela pandemia de COVID-19</li>
+                        <li>SARSr-COV.fasta — Coronavírus relacionados ao SARS</li>
+                        <li>MERS sequence.fasta — Middle East Respiratory Syndrome</li>
+                        <li>EBOLAV.fasta — Vírus Ebola (controle externo ao grupo SARS)</li>
+                    </ul>
+                </blockquote>
+
+                <h3>Tecnologias Utilizadas</h3>
+                <ul>
+                    <li>
+                        <strong>Python:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Linguagem principal do projeto, escolhida pela ampla disponibilidade de bibliotecas científicas e bioinformáticas. Python é o padrão da indústria para análise de dados, machine learning e bioinformática.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>BioPython (Bio.SeqIO):</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Biblioteca especializada em bioinformática para Python. Utilizada para fazer o parsing de arquivos no formato FASTA — padrão amplamente adotado para representação de sequências de DNA, RNA e proteínas. Permite ler, manipular e iterar sobre registros genômicos de forma simples.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>scikit-learn (KMeans, PCA, OneHotEncoder):</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Principal biblioteca de machine learning do ecossistema Python. Três módulos foram fundamentais: <em>OneHotEncoder</em> para codificar cada nucleotídeo (A, T, G, C e variantes IUPAC) em vetores numéricos; <em>PCA</em> (Análise de Componentes Principais) para reduzir a alta dimensionalidade das sequências para 3 componentes visualizáveis; e <em>KMeans</em> para o clustering propriamente dito.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>NumPy:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Biblioteca fundamental para computação numérica em Python. Utilizada para manipulação de arrays multidimensionais durante o processo de codificação one-hot das sequências e operações matriciais no pipeline de pré-processamento.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Matplotlib (mplot3d):</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Biblioteca de visualização de dados. O módulo mplot3d foi utilizado para plotar os clusters resultantes em um espaço tridimensional, com cada ponto representando uma sequência genômica e as cores indicando o cluster ao qual foi atribuída.
+                        </details>
+                    </li>
+                </ul>
+
+                <h3>Pipeline do Algoritmo</h3>
+                <blockquote>
+                    <ul>
+                        <li><strong>Carregamento:</strong> Leitura de sequências FASTA via BioPython</li>
+                        <li><strong>Limpeza:</strong> Substituição de caracteres inválidos por 'N' (nucleotídeo indeterminado)</li>
+                        <li><strong>Padronização:</strong> Truncamento ou preenchimento de todas as sequências para 500 nucleotídeos</li>
+                        <li><strong>Codificação:</strong> Conversão de cada nucleotídeo em vetor one-hot com 14 categorias (A, T, G, C, N e variantes IUPAC)</li>
+                        <li><strong>Redução Dimensional:</strong> PCA de alta dimensionalidade para 3 componentes principais</li>
+                        <li><strong>Número Ideal de Clusters:</strong> Método do cotovelo via segunda derivada da inércia do K-Means</li>
+                        <li><strong>Clustering:</strong> K-Means com número de clusters determinado automaticamente</li>
+                        <li><strong>Visualização:</strong> Gráfico 3D com clusters coloridos</li>
+                    </ul>
+                </blockquote>
+
+                <h3>Contribuições e Aprendizados</h3>
+                <blockquote>
+                    Projeto desenvolvido de forma autônoma, unindo dois mundos da minha formação. O maior desafio foi o pré-processamento das sequências genômicas: as sequências têm tamanhos muito diferentes entre vírus e possuem caracteres IUPAC (além de A, T, G, C) que precisam ser tratados. Implementar o método do cotovelo com segunda derivada para determinar o número ideal de clusters automaticamente foi o ponto técnico mais interessante. O projeto evidenciou como técnicas de machine learning podem ser diretamente aplicadas a dados biológicos reais.
+                </blockquote>
+
+                <div class="btn-wrapper">
+                    <a href="https://github.com/jonasrsribeiro/IA-agrupamento-genomico" class="btn" target="_blank">Acessar Projeto</a>
+                </div>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jonas Rafael Siqueira Ribeiro.</p>
+    </footer>
+</body>
+</html>

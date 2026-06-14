@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas Ribeiro - Projetos</title>
+    <link rel="stylesheet" href="../projetos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo Jonas Ribeiro" />
+            </div>
+            <div class="info-perfil">
+                <h1>JONAS RAFAEL SIQUEIRA RIBEIRO</h1>
+                <h2>Desenvolvedor de Softwares</h2>
+                <div class="contact-info">
+                    <p>📧 jonasrafdev@gmail.com</p>
+                    <p>📍 São José dos Campos, SP - Brasil</p>
+                    <p>🔗 <a href="https://linkedin.com/in/jonasrsribeiro" target="_blank">LinkedIn</a> | 🔗 <a href="https://github.com/jonasrsribeiro" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="creative-navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projetos-pessoais.html">Projetos Pessoais</a></li>
+                <li><a href="projetos.html" class="active">Projetos Integradores</a></li>
+                <li><a href="informacoes.html">Informações</a></li>
+            </ul>
+        </nav>
+        <br>
+        <hr>
+        <section class="projetos-container">
+            <article class="projeto-item">
+                <nav class="creative-navbar">
+                    <ul>
+                        <li><a href="projetos.html">1 SEMESTRE</a></li>
+                        <li><a href="projetos2.html">2 SEMESTRE</a></li>
+                        <li><a href="projetos3.html">3 SEMESTRE</a></li>
+                        <li><a href="projetos4.html">4 SEMESTRE</a></li>
+                        <li><a href="projetos5.html">5 SEMESTRE</a></li>
+                        <li><a href="projetos6.html" class="active">6 SEMESTRE</a></li>
+                    </ul>
+                </nav>
+                <br>
+                <hr>
+                <h2>Stratos - Plataforma Inteligente de Análise Territorial e Ambiental</h2>
+                <p style="text-align: center;">
+                    <img src="../img/logo Stratos.png" alt="logo Stratos" class="projeto-logo">
+                </p>
+                <div class="projeto-intro">
+                    <span class="projeto-ano">2026.1</span>
+                    <p>Desenvolvido para o Projeto Integrador 6 da FATEC. Utilizando as metodologias Scrum, atuei como <strong>Product Owner</strong> e Development Team.</p>
+                    <p>O projeto propõe uma plataforma inteligente de análise territorial com foco em critérios ASG (Ambiental, Social e Governança) para propriedades rurais. O desafio central era integrar dados geoespaciais de múltiplas fontes públicas — SICAR, INPE, ICMBio, FUNAI, INCRA e FCP — que hoje estão dispersas e sem interoperabilidade, tornando a fiscalização e análise de risco ambiental lenta, manual e pouco acessível para órgãos públicos e analistas.</p>
+                    <a href="https://github.com/jonasrsribeiro/documentation-interrogacao" target="_blank" class="btn">Acessar Repositório Sistema ASG</a>
+                </div>
+
+                <h3>Dificuldades</h3>
+                <blockquote>
+                    A fiscalização ambiental de propriedades rurais depende de dados distribuídos em múltiplas fontes públicas sem integração entre si. O cruzamento manual dessas informações geoespaciais é lento, propenso a erros e inviável para análise em escala. A ausência de uma interface unificada que combine visualização de mapa, cruzamento automático de dados e consulta em linguagem natural impõe barreiras técnicas à tomada de decisão para fiscais e analistas ambientais.
+                </blockquote>
+
+                <h3>Proposta de Solução</h3>
+                <blockquote>
+                    Uma plataforma web que integra, cruza e visualiza dados geoespaciais públicos sobre propriedades rurais. O usuário busca uma propriedade pelo código CAR, visualiza seu polígono no mapa com camadas temáticas (PRODES, DETER, queimadas, UCs, terras indígenas, assentamentos, quilombolas), recebe um relatório ASG consolidado e pode interagir com um chatbot de linguagem natural para consultas contextuais. O sistema inclui painel administrativo para atualização de dados e exportação de relatórios em PDF.
+                </blockquote>
+
+                <p style="text-align: center;">
+                    <img src="../img/gifStratos.gif" alt="Demonstração do Projeto Stratos">
+                </p>
+
+                <h3>Tecnologias Utilizadas</h3>
+                <ul>
+                    <li>
+                        <strong>TypeScript e React com Vite:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            O frontend foi desenvolvido em TypeScript com React e Vite, priorizando performance e tipagem segura. A interface exibe mapas interativos com múltiplas camadas geoespaciais (Google Maps), um painel de resultados ASG, interface de chat com o chatbot e painel administrativo configurável via settings. O uso de Vite como bundler acelerou significativamente o ciclo de desenvolvimento.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Python:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            O backend foi inteiramente desenvolvido em Python, responsável pela ingestão e processamento de dados geoespaciais (shapefiles SICAR, dados INPE, áreas protegidas), cruzamento ASG, geração de relatórios em PDF e o motor do chatbot com PLN. A escolha de Python foi natural dado o ecossistema de bibliotecas geoespaciais e de NLP disponíveis na linguagem.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>PostgreSQL com PostGIS:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            A extensão PostGIS transformou o PostgreSQL em um banco de dados geoespacial, permitindo armazenar e consultar polígonos de propriedades rurais, áreas de desmatamento, terras indígenas e demais camadas com operações espaciais nativas (intersecção, contenção, área). Isso viabilizou o cruzamento ASG diretamente no banco com consultas geoespaciais otimizadas.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Google Maps:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            A API do Google Maps foi utilizada para renderizar o mapa interativo no frontend, exibindo os polígonos das propriedades rurais e as camadas temáticas (INPE, áreas protegidas, etc.). A integração incluiu renderização de múltiplas camadas sobrepostas e funcionalidades de zoom e navegação geoespacial.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>NLP — Word2Vec e MLP:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            O chatbot evoluiu ao longo das sprints de um sistema baseado em palavras-chave para uma solução com busca semântica usando Word2Vec (embeddings de palavras) combinado com uma rede neural MLP (Multilayer Perceptron) para classificação de intenções. Isso permitiu ao chatbot compreender consultas mais naturais sobre municípios, coordenadas e dados ASG das propriedades.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Docker Compose e Nginx:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            A arquitetura de microsserviços foi orquestrada com Docker Compose. O Nginx atuou como proxy reverso, roteando requisições entre os serviços de frontend, backend e banco de dados. A infraestrutura foi configurada desde o início do projeto para facilitar o deploy e garantir isolamento entre os serviços.
+                        </details>
+                    </li>
+                </ul>
+
+                <h3>Contribuições Pessoais</h3>
+                <blockquote>
+                    <p>
+                        Este foi o projeto de maior responsabilidade e maior amplitude de contribuição da minha trajetória na FATEC. Como Product Owner, defini o backlog do produto, escrevi as user stories, conduzi o refinamento com o time e organizei as prioridades de cada sprint equilibrando complexidade técnica e valor entregue. Criei e mantive a documentação do projeto ao longo das quatro sprints.
+                    </p>
+                    <p>
+                        Além do papel de PO, contribuí diretamente com o desenvolvimento tanto no frontend quanto no backend. No frontend (React + TypeScript), fui responsável pela estrutura inicial do projeto, pela integração com o INPE para exibição de imagens de satélite, pela refatoração das camadas de áreas protegidas, pela atualização dos relatórios ASG, pela adição dos botões do painel administrativo, pelas melhorias na interface do chatbot e por correções de UX relacionadas à busca por SICAR. No backend (Python), trabalhei na evolução do chatbot — implementando embedding com Word2Vec e classificação com MLP — na exportação de relatórios ASG em PDF com filtros de ano, na integração de dados do INPE e na camada de áreas protegidas e propriedades no backend.
+                    </p>
+                </blockquote>
+
+                <h3>Hard Skills</h3>
+                <blockquote>
+                    <ul>
+                        <li>Product Owner / Gestão de Produto: Primeiro projeto em que assumi o papel de PO de forma completa — backlog, user stories, refinamento, priorização e apresentações. Entender como traduzir problemas reais em requisitos claros e gerenciáveis foi o maior aprendizado técnico-gerencial do curso.</li>
+                        <li>React e TypeScript (Frontend): Nível de autonomia consolidado. Consegui estruturar o projeto do zero, integrar mapas com múltiplas camadas, construir interfaces de chat e painéis administrativos com confiança e qualidade.</li>
+                        <li>Python (Backend — NLP): Evolução significativa no uso de Python para NLP. Implementar Word2Vec e MLP do zero para um chatbot com intenções e entidades foi o desafio técnico mais sofisticado que enfrentei no curso.</li>
+                        <li>PostGIS e Dados Geoespaciais: A combinação de PostgreSQL com PostGIS para análise territorial foi uma extensão natural do meu interesse em Geoprocessamento, aplicada agora em um sistema de produção com dados reais do SICAR e INPE.</li>
+                        <li>Arquitetura de Microsserviços com Docker e Nginx: Projeto mais maduro em termos de infraestrutura, com proxy reverso, isolamento de serviços e CI/CD configurados desde o primeiro commit.</li>
+                    </ul>
+                </blockquote>
+
+                <h3>Soft Skills</h3>
+                <blockquote>
+                    <ul>
+                        <li>Proatividade: Como Product Owner, a proatividade ganhou um novo significado: não esperar que os problemas do produto apareçam, mas antecipá-los. Além do papel de PO, contribuí ativamente com o desenvolvimento em frontend e backend nos momentos em que o time precisava de reforço técnico, transitando entre gestão de produto e código conforme a necessidade da sprint.</li>
+                        <li>Autonomia: A autonomia neste semestre evoluiu para além da resolução de problemas técnicos. Como PO, aprendi a tomar decisões de produto com confiança mesmo sem todas as informações disponíveis — definindo prioridades, escopo e critérios de aceitação de forma independente, alinhando com o time sem depender de validação constante.</li>
+                        <li>Comunicação: O papel de Product Owner é, em essência, um papel de comunicação. Traduzir o problema ambiental em requisitos técnicos para o time, escrever user stories claras, conduzir refinamentos e documentar decisões de produto foram habilidades que exercitei intensamente. A comunicação neste projeto foi a mais estruturada e intencional de toda a minha trajetória na FATEC.</li>
+                        <li>Entrega e Resultados: Coordenar as entregas como PO, garantindo que cada sprint fechasse com valor real entregue ao produto, enquanto também contribuía com código, exigiu um nível de organização pessoal diferente de tudo que havia feito antes. Aprender a priorizar meu próprio trabalho com a mesma disciplina que priorizava o backlog foi o aprendizado mais maduro deste semestre.</li>
+                    </ul>
+                </blockquote>
+
+                <div class="btn-wrapper">
+                    <a href="https://github.com/jonasrsribeiro/documentation-interrogacao" class="btn">Acessar Projeto</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jonas Rafael Siqueira Ribeiro.</p>
+    </footer>
+</body>
+</html>

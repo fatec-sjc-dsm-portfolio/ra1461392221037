@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas Ribeiro - Projetos</title>
+    <link rel="stylesheet" href="../projetos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo Jonas Ribeiro" />
+            </div>
+            <div class="info-perfil">
+                <h1>JONAS RAFAEL SIQUEIRA RIBEIRO</h1>
+                <h2>Desenvolvedor de Softwares</h2>
+                <div class="contact-info">
+                    <p>📧 jonasrafdev@gmail.com</p>
+                    <p>📍 São José dos Campos, SP - Brasil</p>
+                    <p>🔗 <a href="https://linkedin.com/in/jonasrsribeiro" target="_blank">LinkedIn</a> | 🔗 <a href="https://github.com/jonasrsribeiro" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <nav class="creative-navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projetos-pessoais.html">Projetos Pessoais</a></li>
+                <li><a href="projetos.html" class="active">Projetos Integradores</a></li>
+                <li><a href="informacoes.html">Informações</a></li>
+            </ul>
+        </nav>
+        <br>
+        <hr>
+        <section class="projetos-container">
+            <article class="projeto-item">
+                <nav class="creative-navbar">
+                    <ul>
+                        <li><a href="projetos.html">1 SEMESTRE</a></li>
+                        <li><a href="projetos2.html">2 SEMESTRE</a></li>
+                        <li><a href="projetos3.html">3 SEMESTRE</a></li>
+                        <li><a href="projetos4.html" class="active">4 SEMESTRE</a></li>
+                        <li><a href="projetos5.html">5 SEMESTRE</a></li>
+                        <li><a href="projetos6.html">6 SEMESTRE</a></li>
+                    </ul>
+                </nav>
+                <br>
+                <hr>
+                <h2>LW-Solution - Sistema de Monitoramento de Estações Meteorológicas</h2>
+                <p style="text-align: center;">
+                    <img src="../img/logo LW Solution.png" alt="logo LW Solution" class="projeto-logo">
+                </p>
+                <div class="projeto-intro">
+                    <span class="projeto-ano">2024.1</span>
+                    <p>Desenvolvido para o Projeto Integrador 4 da FATEC, com a <a href="https://tecsus.com.br/" target="_blank">Tecsus</a> como cliente. Utilizando as metodologias Scrum, atuei como Development Team.</p>
+                    <p>Nossa parceira, a empresa Tecsus, atua com soluções de telemetria e coleta de dados para concessionárias e indústrias. O desafio proposto foi expandir seu portfólio para o monitoramento ambiental com estações meteorológicas de baixo custo, capazes de coletar e transmitir dados atmosféricos em tempo real para um servidor central, com foco também em uma abordagem educativa para alunos do ensino médio.</p>
+                    <a href="https://github.com/jonasrsribeiro/Documentation-lw-solution" target="_blank" class="btn">Acessar Repositório LW-Solution</a>
+                </div>
+
+                <h3>Dificuldades</h3>
+                <blockquote>
+                    A ausência de soluções acessíveis e integradas para monitoramento meteorológico local limitava a capacidade de coletar dados ambientais precisos em múltiplos pontos. Os dados de vento, pluviometria, umidade, temperatura e pressão eram coletados de forma isolada e sem centralização, dificultando a visualização em tempo real, a emissão de alertas automáticos e o engajamento educativo com o tema.
+                </blockquote>
+
+                <h3>Proposta de Solução</h3>
+                <blockquote>
+                    Desenvolver um sistema completo de monitoramento meteorológico: estações físicas de baixo custo equipadas com sensores (direção e velocidade do vento, pluviometria, umidade, temperatura e pressão) que transmitem dados para um servidor central; um portal web com visualização em tempo real, dashboards interativos e emissão de alertas; e um módulo educativo com explicação dos cálculos matemáticos dos parâmetros meteorológicos, voltado a instituições de ensino médio.
+                </blockquote>
+
+                <p style="text-align: center;">
+                    <img src="../img/gifLW.gif" alt="Demonstração do Projeto LW-Solution">
+                </p>
+
+                <h3>Tecnologias Utilizadas</h3>
+                <ul>
+                    <li>
+                        <strong>TypeScript:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            TypeScript foi a linguagem principal tanto no frontend quanto no backend do projeto. Sua tipagem estática permitiu maior segurança no desenvolvimento de um sistema com múltiplos módulos interdependentes — CRUDs de usuários, estações, métricas e alertas — reduzindo erros em tempo de desenvolvimento e facilitando a manutenção do código em equipe.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Node.js e Express.js:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            O backend foi estruturado em arquitetura de microsserviços com Node.js e Express.js, com módulos separados para gerenciamento de estações e métricas, recepção de dados, tratamento de dados e controle de dispositivos. Essa separação facilitou o desenvolvimento paralelo e a escalabilidade de cada responsabilidade do sistema.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>React:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            O portal web foi desenvolvido em React com TypeScript e SCSS, exibindo os dados meteorológicos em dashboards com gráficos e estatísticas em tempo real. A componentização do React permitiu reutilizar elementos visuais entre diferentes telas de estações e relatórios.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>PostgreSQL:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Banco de dados relacional escolhido para estruturar e persistir os dados das estações, medições, alertas e usuários. O modelo relacional foi desenvolvido para suportar múltiplas estações com diferentes tipos de parâmetros e unidades de medida, além de registrar ocorrências históricas de alertas.
+                        </details>
+                    </li>
+                    <li>
+                        <strong>Docker:</strong>
+                        <details>
+                            <summary>Saiba mais</summary>
+                            Docker foi utilizado para containerizar cada microsserviço do backend, com configurações separadas para ambiente de desenvolvimento e produção via Docker Compose. Isso garantiu consistência de ambiente entre os membros da equipe e facilitou o deploy da solução.
+                        </details>
+                    </li>
+                </ul>
+
+                <h3>Contribuições Pessoais</h3>
+                <blockquote>
+                    <p>
+                        Neste projeto, contribuí com a definição da arquitetura do sistema e com a modelagem do banco de dados relacional, registradas em commits de documentação no repositório. Elaborei os diagramas de arquitetura e o modelo relacional do banco que serviram de referência para o desenvolvimento ao longo das sprints, atualizando a arquitetura na Sprint 3 para refletir as mudanças no sistema. Além disso, participei do desenvolvimento do backend como membro do Dev Team, atuando na criação de CRUDs e na estruturação dos módulos do sistema.
+                    </p>
+                </blockquote>
+
+                <h3>Hard Skills</h3>
+                <blockquote>
+                    <ul>
+                        <li>TypeScript: Primeiro uso mais sólido da linguagem com tipagem rigorosa em um projeto real com múltiplos módulos. Pude perceber na prática o ganho de segurança que a tipagem estática traz no desenvolvimento em equipe.</li>
+                        <li>Arquitetura de Microsserviços: Primeira experiência com separação de responsabilidades em serviços independentes. A modelagem da arquitetura me obrigou a pensar no sistema como um todo antes de codificar.</li>
+                        <li>PostgreSQL: Modelagem mais madura e pensada para um domínio real com muitas entidades relacionadas (estações, parâmetros, alertas, ocorrências). Evolução clara em relação aos semestres anteriores.</li>
+                        <li>Docker: Contato mais aprofundado com containerização após a introdução no semestre anterior, desta vez aplicando configurações distintas para dev e prod.</li>
+                    </ul>
+                </blockquote>
+
+                <h3>Soft Skills</h3>
+                <blockquote>
+                    <ul>
+                        <li>Proatividade: Tento sempre ser o mais proativo possível na equipe. Neste projeto, tomei a iniciativa de contribuir com a definição da arquitetura e modelagem do banco, indo além das tasks de código e ajudando a construir a base técnica para o time antes mesmo de começar a programar.</li>
+                        <li>Autonomia: Quando me atribuem tarefas, tento fazê-las e concluí-las por conta própria. A elaboração dos diagramas de arquitetura foi feita de forma independente, pesquisando referências e validando com o time, pedindo ajuda apenas quando necessário após persistir na solução.</li>
+                        <li>Comunicação: A comunicação neste projeto foi mais fluida do que nos semestres anteriores. A experiência acumulada com Scrum permitiu papéis mais bem definidos e entregas mais planejadas. Produzir documentação técnica da arquitetura também ajudou o time a alinhar expectativas sobre o sistema antes de codificar.</li>
+                        <li>Entrega e Resultados: Com um sistema de maior complexidade e múltiplas camadas (hardware, backend, frontend e módulo educativo), aprender a priorizar e entregar dentro das sprints foi um desafio importante. Conseguimos manter o ritmo de entregas ao longo das quatro sprints com menos corridas de última hora do que nos semestres anteriores.</li>
+                    </ul>
+                </blockquote>
+
+                <div class="btn-wrapper">
+                    <a href="https://github.com/jonasrsribeiro/Documentation-lw-solution" class="btn">Acessar Projeto</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jonas Rafael Siqueira Ribeiro.</p>
+    </footer>
+</body>
+</html>
